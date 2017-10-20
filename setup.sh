@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/opt/farm/scripts/setup/role.sh sf-backup
+/opt/farm/scripts/setup/extension.sh sf-backup
 
 mkdir -p /srv/imap /var/log/sync
 
