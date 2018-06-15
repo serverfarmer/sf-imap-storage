@@ -1,6 +1,6 @@
 #!/bin/sh
 . /opt/farm/scripts/functions.custom
-. /opt/farm/scripts/functions.sync
+. /opt/farm/ext/storage-utils/functions.sync
 
 script="imap-storage"
 lock $script
