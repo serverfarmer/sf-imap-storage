@@ -1,6 +1,7 @@
 #!/bin/sh
 
 /opt/farm/scripts/setup/extension.sh sf-backup
+/opt/farm/scripts/setup/extension.sh sf-storage-utils
 
 mkdir -p /srv/imap /var/log/sync
 
