@@ -1,5 +1,4 @@
 #!/bin/sh
-. /opt/farm/scripts/functions.custom
 . /opt/farm/ext/storage-utils/functions.sync
 
 script="imap-storage"
@@ -16,7 +15,7 @@ for S in `cat /etc/local/.config/imap.accounts`; do
 	port=`echo $S |cut -d':' -f 2`
 	accounts=`echo $S |cut -d':' -f 3 |sed s/,/\ /g`
 
-	key=`ssh_dedicated_key_storage_filename $host root`
+	key=`/opt/farm/ext/keys/get-ssh-dedicated-key.sh $host root`
 	if [ "`ssh -p $port -i $key root@$host \"LANG=en_US.UTF-8 ls -d /srv/imap/* 2>/dev/null\"`" != "" ]; then
 
 		dirs=""
